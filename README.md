@@ -15,10 +15,10 @@ npm i stdobj
 `stdobj` provides a number of methods which can be destructured and used
 in code. Below is a list of the supported methods:
 
-* [`isObj`](#isObj) - Checks if parameter passed is an object literal
+* [`isObj`](#isobj) - Checks if parameter passed is an object literal
 * [`keys`](#keys) - Retruns array of keys from object
-* [`toPairs`](#toPairs) - Converts object to array of key-value pair arrays
-* [`fromPairs`](#fromPairs) - Converts array of key-value pairs to object
+* [`toPairs`](#topairs) - Converts object to array of key-value pair arrays
+* [`fromPairs`](#frompairs) - Converts array of key-value pairs to object
 * [`get`](#get) - Gets a value using standard or dot-notated key
 * [`set`](#set) - Sets a value using standard or dot-notated key
 * [`flatten`](#flatten) - Flattens object to dot-notated key-value object
