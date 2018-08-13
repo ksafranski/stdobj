@@ -26,7 +26,9 @@ in code. Below is a list of the supported methods:
 * [`redact`](#redact) - Redacts keys or values on an object literal
 * [`merge`](#merge) - Performs a deep merge on object parameter(s)
 
-### [`isObj(<*>)`](#isObj) - Checks if parameter passed is an object literal
+### isObj
+
+> [`isObj(<*>)`](#isObj) - Checks if parameter passed is an object literal
 
 ```javascript
 const obj = { foo: 'bar' }
@@ -36,7 +38,9 @@ isObj(obj) // -> true
 isObj(notObj) // -> false
 ```
 
-### [`keys(<Object>)`](#keys) - Retruns array of keys from object
+### keys
+
+> [`keys(<Object>)`](#keys) - Retruns array of keys from object
 
 ```javascript
 const obj = { foo: 'bar', fizz: 'buzz' }
@@ -44,7 +48,9 @@ const obj = { foo: 'bar', fizz: 'buzz' }
 keys(obj) // -> [ 'foo', 'fizz' ]
 ```
 
-### [`toPairs(<Object>)`](#toPairs) - Converts object to array of key-value pair arrays
+### toPairs
+
+> [`toPairs(<Object>)`](#toPairs) - Converts object to array of key-value pair arrays
 
 ```javascript
 const obj = { foo: 'bar', fizz: 'buzz' }
@@ -52,7 +58,9 @@ const obj = { foo: 'bar', fizz: 'buzz' }
 toPairs(obj) // -> [ [ 'foo', 'bar' ], [ 'fizz', 'buzz' ] ]
 ```
 
-### [`fromPairs(<Array>)`](#fromPairs) - Converts array of key-value pairs to object
+### fromPairs
+
+> [`fromPairs(<Array>)`](#fromPairs) - Converts array of key-value pairs to object
 
 ```javascript
 const pairs = [ [ 'foo', 'bar' ], [ 'fizz', 'buzz' ] ]
@@ -60,7 +68,9 @@ const pairs = [ [ 'foo', 'bar' ], [ 'fizz', 'buzz' ] ]
 fromPairs(pairs) // -> { foo: 'bar', fizz: 'buzz' }
 ```
 
-### [`get(<String>)`](#get) - Gets a value using standard or dot-notated key
+### get
+
+> [`get(<String>)`](#get) - Gets a value using standard or dot-notated key
 
 ```javascript
 const obj = {
@@ -74,7 +84,9 @@ get('foo') // -> 'bar'
 get('fizz.buzz') // -> 'bizz'
 ```
 
-### [`set(Obj<Object>, Key<String>, Value<*>)`](#set) - Sets a value using standard or dot-notated key
+### set
+
+> [`set(Obj<Object>, Key<String>, Value<*>)`](#set) - Sets a value using standard or dot-notated key
 
 ```javascript
 const obj = {}
@@ -82,7 +94,9 @@ const obj = {}
 set(obj, 'foo.bar', 'fizz') // obj = { foo: { bar: 'fizz' } }
 ```
 
-### [`flatten(<Object>)`](#flatten) - Flattens object to dot-notated key-value object
+### flatten
+
+> [`flatten(<Object>)`](#flatten) - Flattens object to dot-notated key-value object
 
 ```javascript
 const obj = {
@@ -95,7 +109,9 @@ const obj = {
 flatten(obj) // -> { foo: 'bar', 'fizz.buzz': 'bizz' }
 ```
 
-### [`expand(<Object>)`](#expand) - Expands a flattened, dot-notated object to nested object
+### expand
+
+> [`expand(<Object>)`](#expand) - Expands a flattened, dot-notated object to nested object
 
 ```javascript
 const flatObj = { foo: 'bar', 'fizz.buzz': 'bizz' }
@@ -103,7 +119,9 @@ const flatObj = { foo: 'bar', 'fizz.buzz': 'bizz' }
 expand(flatObj) // -> { foo: 'bar', fizz: { buzz: 'bizz' } }
 ```
 
-### [`redact(Obj<Object>, <Object{keys<Array>, values<Array>}>`](#redact) - Redacts keys or values on an object literal
+### redact
+
+> [`redact(Obj<Object>, <Object{keys<Array>, values<Array>}>`](#redact) - Redacts keys or values on an object literal
 
 ```javascript
 const obj = {
@@ -118,7 +136,9 @@ const obj = {
 redact(obj, { keys: [ 'fizz.bizz' ], values: [ 'baz' ] }) // -> { foo: 'bar', fizz: { buzz: 'fizz' } }
 ```
 
-### [`merge(...<Object>)`](#merge) - Performs a deep merge on object parameter(s)
+### merge
+
+> [`merge(...<Object>)`](#merge) - Performs a deep merge on object parameter(s)
 
 ```javascript
 const objOne = { foo: 'bar' }
