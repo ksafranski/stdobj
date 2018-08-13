@@ -28,7 +28,7 @@ in code. Below is a list of the supported methods:
 
 ### isObj
 
-> [`isObj(<*>)`](#isObj) - Checks if parameter passed is an object literal
+> [`isObj(<*>)`](https://github.com/Fluidbyte/stdobj/blob/master/lib/isObj.js) - Checks if parameter passed is an object literal
 
 ```javascript
 const obj = { foo: 'bar' }
@@ -40,7 +40,7 @@ isObj(notObj) // -> false
 
 ### keys
 
-> [`keys(<Object>)`](#keys) - Retruns array of keys from object
+> [`keys(<Object>)`](https://github.com/Fluidbyte/stdobj/blob/master/lib/keys.js) - Retruns array of keys from object
 
 ```javascript
 const obj = { foo: 'bar', fizz: 'buzz' }
@@ -50,7 +50,7 @@ keys(obj) // -> [ 'foo', 'fizz' ]
 
 ### toPairs
 
-> [`toPairs(<Object>)`](#toPairs) - Converts object to array of key-value pair arrays
+> [`toPairs(<Object>)`](https://github.com/Fluidbyte/stdobj/blob/master/lib/toPairs.js) - Converts object to array of key-value pair arrays
 
 ```javascript
 const obj = { foo: 'bar', fizz: 'buzz' }
@@ -60,7 +60,7 @@ toPairs(obj) // -> [ [ 'foo', 'bar' ], [ 'fizz', 'buzz' ] ]
 
 ### fromPairs
 
-> [`fromPairs(<Array>)`](#fromPairs) - Converts array of key-value pairs to object
+> [`fromPairs(<Array>)`](https://github.com/Fluidbyte/stdobj/blob/master/lib/fromPairs.js) - Converts array of key-value pairs to object
 
 ```javascript
 const pairs = [ [ 'foo', 'bar' ], [ 'fizz', 'buzz' ] ]
@@ -70,7 +70,7 @@ fromPairs(pairs) // -> { foo: 'bar', fizz: 'buzz' }
 
 ### get
 
-> [`get(<String>)`](#get) - Gets a value using standard or dot-notated key
+> [`get(<String>)`](https://github.com/Fluidbyte/stdobj/blob/master/lib/get.js) - Gets a value using standard or dot-notated key
 
 ```javascript
 const obj = {
@@ -86,7 +86,7 @@ get('fizz.buzz') // -> 'bizz'
 
 ### set
 
-> [`set(Obj<Object>, Key<String>, Value<*>)`](#set) - Sets a value using standard or dot-notated key
+> [`set(Obj<Object>, Key<String>, Value<*>)`](https://github.com/Fluidbyte/stdobj/blob/master/lib/set.js) - Sets a value using standard or dot-notated key
 
 ```javascript
 const obj = {}
@@ -96,7 +96,7 @@ set(obj, 'foo.bar', 'fizz') // obj = { foo: { bar: 'fizz' } }
 
 ### flatten
 
-> [`flatten(<Object>)`](#flatten) - Flattens object to dot-notated key-value object
+> [`flatten(<Object>)`](https://github.com/Fluidbyte/stdobj/blob/master/lib/flatten.js) - Flattens object to dot-notated key-value object
 
 ```javascript
 const obj = {
@@ -111,7 +111,7 @@ flatten(obj) // -> { foo: 'bar', 'fizz.buzz': 'bizz' }
 
 ### expand
 
-> [`expand(<Object>)`](#expand) - Expands a flattened, dot-notated object to nested object
+> [`expand(<Object>)`](https://github.com/Fluidbyte/stdobj/blob/master/lib/expand.js) - Expands a flattened, dot-notated object to nested object
 
 ```javascript
 const flatObj = { foo: 'bar', 'fizz.buzz': 'bizz' }
@@ -121,7 +121,7 @@ expand(flatObj) // -> { foo: 'bar', fizz: { buzz: 'bizz' } }
 
 ### redact
 
-> [`redact(Obj<Object>, <Object{keys<Array>, values<Array>}>`](#redact) - Redacts keys or values on an object literal
+> [`redact(Obj<Object>, <Object{keys<Array>, values<Array>}>`](https://github.com/Fluidbyte/stdobj/blob/master/lib/redact.js) - Redacts keys or values on an object literal
 
 ```javascript
 const obj = {
@@ -138,7 +138,7 @@ redact(obj, { keys: [ 'fizz.bizz' ], values: [ 'baz' ] }) // -> { foo: 'bar', fi
 
 ### merge
 
-> [`merge(...<Object>)`](#merge) - Performs a deep merge on object parameter(s)
+> [`merge(...<Object>)`](https://github.com/Fluidbyte/stdobj/blob/master/lib/merge.js) - Performs a deep merge on object parameter(s)
 
 ```javascript
 const objOne = { foo: 'bar' }
