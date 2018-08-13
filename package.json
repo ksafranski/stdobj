@@ -1,0 +1,41 @@
+{
+  "name": "stdobj",
+  "version": "0.0.1",
+  "main": "index.js",
+  "author": "fluidbyte <kent@fluidbyte.net>",
+  "license": "ISC",
+  "scripts": {
+    "lint": "standard --fix",
+    "test": "NODE_PATH=./ jest --coverage --forceExit",
+    "test:watch": "NODE_PATH=./ jest --watchAll --runInBand",
+    "prerelease": "yarn lint && yarn test",
+    "release:patch": "yarn prerelease && npm version patch && git push origin master && git push --tags && npm publish",
+    "release:minor": "yarn prerelease && npm version minor && git push origin master && git push --tags && npm publish",
+    "release:major": "yarn prerelease && npm version major && git push origin master && git push --tags && npm publish"
+  },
+  "devDependencies": {
+    "jest": "22.4.3",
+    "standard": "^11.0.1"
+  },
+  "standard": {
+    "env": [
+      "jest"
+    ]
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "verbose": true,
+    "coverageThreshold": {
+      "global": {
+        "branches": 95,
+        "functions": 95,
+        "lines": 95,
+        "statements": -5
+      }
+    }
+  },
+  "methods": [
+    "isObj",
+    "flatten"
+  ]
+}
