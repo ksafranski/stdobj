@@ -1,10 +1,10 @@
 {
   "name": "stdobj",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "main": "index.js",
   "author": "fluidbyte <kent@fluidbyte.net>",
   "license": "ISC",
-  "repository" : "git@github.com:Fluidbyte/stdobj.git",
+  "repository": "git@github.com:Fluidbyte/stdobj.git",
   "scripts": {
     "lint": "standard --fix",
     "test": "NODE_PATH=./ jest --coverage --forceExit",
