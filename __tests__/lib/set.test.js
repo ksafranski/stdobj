@@ -17,4 +17,17 @@ describe('set', () => {
       }
     })
   })
+  it('sets the value to the key after parsing arrays in dot-notation', () => {
+    const o = {}
+    set(o, 'foo[0]', 'one')
+    set(o, 'foo[1]', 'two')
+    set(o, 'foo[2].bar', 'fizz')
+    expect(o).toEqual({
+      foo: [
+        'one',
+        'two',
+        { bar: 'fizz' }
+      ]
+    })
+  })
 })

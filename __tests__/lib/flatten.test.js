@@ -10,7 +10,11 @@ const fixture = {
     deep: 'deep',
     nested: {
       obj: 'nested'
-    }
+    },
+    arr: [
+      { arrA: 'a' },
+      { arrB: 'b' }
+    ]
   }
 }
 
@@ -23,9 +27,15 @@ describe('flatten', () => {
       'num': 18,
       'bool': true,
       'nil': null,
-      'arr': [ 'a' ],
+      'arr[0]': 'a',
       'obj.deep': 'deep',
-      'obj.nested.obj': 'nested'
+      'obj.nested.obj': 'nested',
+      'obj.arr[0].arrA': 'a',
+      'obj.arr[1].arrB': 'b'
     })
+  })
+  test('returns original value if not an object or array', () => {
+    const actual = flatten('foo')
+    expect(actual).toEqual('foo')
   })
 })

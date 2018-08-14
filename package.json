@@ -4,6 +4,7 @@
   "main": "index.js",
   "author": "fluidbyte <kent@fluidbyte.net>",
   "license": "ISC",
+  "repository" : "git@github.com:Fluidbyte/stdobj.git",
   "scripts": {
     "lint": "standard --fix",
     "test": "NODE_PATH=./ jest --coverage --forceExit",
