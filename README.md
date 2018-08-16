@@ -136,6 +136,10 @@ const obj = {
 redact(obj, { keys: [ 'fizz.bizz' ], values: [ 'baz' ] }) // -> { foo: 'bar', fizz: { buzz: 'fizz' } }
 ```
 
+_Note: for arrays, you can specify the index explicity: `foo.bar[1]...` or specify
+that all keys be affected during redaction with `n`; `foo.bar[n]...`. This is useful for 
+picking off properties of object nested in arrays_
+
 ### merge
 
 > [`merge(...<Object>)`](https://github.com/Fluidbyte/stdobj/blob/master/lib/merge.js) - Performs a deep merge on object parameter(s)
