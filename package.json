@@ -37,6 +37,14 @@
   },
   "methods": [
     "isObj",
-    "flatten"
+    "keys",
+    "toPairs",
+    "fromPairs",
+    "get",
+    "set",
+    "flatten",
+    "expand",
+    "redact",
+    "merge"
   ]
 }
