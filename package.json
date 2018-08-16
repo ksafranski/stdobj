@@ -1,6 +1,6 @@
 {
   "name": "stdobj",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "main": "index.js",
   "author": "fluidbyte <kent@fluidbyte.net>",
   "license": "ISC",
