@@ -3,7 +3,7 @@
   "version": "0.5.3",
   "main": "index.js",
   "files": [
-    "dist/"
+    "browser/"
   ],
   "author": "fluidbyte <kent@fluidbyte.net>",
   "license": "ISC",
@@ -12,7 +12,8 @@
     "lint": "standard --fix",
     "test": "NODE_PATH=./ jest --coverage --forceExit",
     "test:watch": "NODE_PATH=./ jest --watchAll --runInBand",
-    "prerelease": "yarn lint && yarn test",
+    "bundle": "parcel build browser.js --out-dir=browser/",
+    "prerelease": "yarn lint && yarn test && yarn bundle",
     "release:patch": "yarn prerelease && npm version patch && git push origin master && git push --tags && npm publish",
     "release:minor": "yarn prerelease && npm version minor && git push origin master && git push --tags && npm publish",
     "release:major": "yarn prerelease && npm version major && git push origin master && git push --tags && npm publish"
