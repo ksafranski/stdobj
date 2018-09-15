@@ -12,7 +12,7 @@
     "lint": "standard --fix",
     "test": "NODE_PATH=./ jest --coverage --forceExit",
     "test:watch": "NODE_PATH=./ jest --watchAll --runInBand",
-    "bundle": "parcel build browser.js --out-dir=browser/",
+    "bundle": "parcel build browser.js --out-dir=browser/ --out-file=index.js",
     "prerelease": "yarn lint && yarn test && yarn bundle",
     "release:patch": "yarn prerelease && npm version patch && git push origin master && git push --tags && npm publish",
     "release:minor": "yarn prerelease && npm version minor && git push origin master && git push --tags && npm publish",
