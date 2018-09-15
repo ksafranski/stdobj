@@ -2,6 +2,9 @@
   "name": "stdobj",
   "version": "0.5.2",
   "main": "index.js",
+  "files": [
+    "dist/"
+  ],
   "author": "fluidbyte <kent@fluidbyte.net>",
   "license": "ISC",
   "repository": "git@github.com:Fluidbyte/stdobj.git",
@@ -16,6 +19,7 @@
   },
   "devDependencies": {
     "jest": "22.4.3",
+    "parcel": "^1.9.7",
     "standard": "^11.0.1"
   },
   "standard": {
